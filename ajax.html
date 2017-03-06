@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ajax</title>
+</head>
+<body>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script>
+		var ttcRequest = $.ajax({
+			url: "http://myttc.ca/finch_station.json",
+			method: "GET",
+			dataType: "jsonp"
+			// the data is sent to a function and then the functiom will pull it out
+			// can only be used if it's actually allowed by the server
+			// we passed this an object as a configuration 
+		});
+
+		ttcRequest.then(function(ttcInfo) { 
+			console.log(ttcInfo);
+			console.log(ttcInfo.stops[1].routes[0].stop_times);
+		});
+		// .then(function(ttcInfo){
+		// 	console.log("It worked!", ttcInfo);
+		// });
+		// object configures our ajax request
+
+
+	</script>
+</body>
+</html>

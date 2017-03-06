@@ -1,0 +1,237 @@
+@import 'partials/setup';
+@import 'partials/typography';
+@import 'partials/variables';
+@import 'partials/mdq';
+
+
+// General CSS
+body {
+	background-image:url('../assets/back.png');
+	width: 100%;
+    font-family: 'DK More', sans-serif;
+}
+
+.wrapper {
+	max-width: 700px;
+	margin:0 auto;
+}
+
+// Header
+header h1 {
+	letter-spacing: 2px;
+    font-size: 50px;
+    text-align: center;
+    color: black;
+    text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.5);
+}
+
+
+// Form
+fieldset {
+    background: white;
+    border-radius: 5px;
+    margin: 20px;
+    box-shadow: inset 2px 2px 15px rgba(0, 0, 0, 0.3);
+    background-image: url(../assets/paper-texture.png);
+}
+
+.btnWrapper { // wraps the btns 
+    display: flex;
+    flex-direction:row;
+    justify-content: space-around;
+}
+
+input[type=radio] { // hides the radio btns
+    display: none;
+}
+
+input[type="radio"]:checked + label{ // when the radio btns are clicked
+    background: rgba(108, 230, 221, 0.5);
+    box-shadow: inset 0px 0px 20px rgba(0, 0, 0, 0.7);
+    border: 2px solid;
+    border-radius: 10px;
+    opacity: 1;
+}
+
+fieldset.typeOfMotivation, fieldset.typeOfTone { 
+     padding: 40px;
+
+     h2 { // blue headers for each section 
+         margin-top: 0;
+         text-align: center;
+         font-size: 33px;
+         color: #5bb0a2;
+         letter-spacing: 1px;
+     }
+}
+
+fieldset.typeOfMotivation label, fieldset.typeOfTone label {
+    border:1px solid;
+    padding:10px;
+    cursor: pointer;
+    display:inline-block;
+    font-size: 20px;
+    width: 25%;
+    margin: 5px;
+    text-align: center;
+    letter-spacing: 1px;
+    border: 2px solid;
+    border-radius: 5px;
+    opacity: .8;
+
+    .fa {  // font awesome icons for type of motivation 
+        display: block;
+        padding-top: 10px;
+    }
+
+    img { // created icons for type of tone
+        width: 70px;
+        padding-top: 10px;
+    }
+}
+
+fieldset.typeOfMotivation label:hover, fieldset.typeOfTone label:hover {
+    background: rgba(108, 230, 221, 0.5);
+    border: 2px solid;
+    border-radius: 10px;
+    opacity: 1;
+}
+
+fieldset.name {
+    padding: 20px;
+}
+
+fieldset.name label {
+    font-size: 20px;
+    letter-spacing: 1.5px;
+}
+
+.nameFlex { // flexes .fromWrapper + .toWrapper
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+}
+
+.fromWrapper, .toWrapper {
+width: 50%;
+text-align: center;
+}
+
+input.names {
+    border: none;
+    width: 50%;
+    font-size: 25px;
+    letter-spacing: 1px;
+    background-image: url(../assets/line2.png);
+    // background-size: contain;
+    background-repeat: no-repeat;
+    background-position: -7px 85%;
+    background-color: transparent;
+    color: #686868;
+    // border-bottom: 1px solid;
+}
+
+input.names:focus {
+    outline:none;
+}
+
+.submit-container {
+    display: flex;
+    justify-content: center;
+}
+
+input.submit {
+    padding: 10px;
+    font-size: 25px;
+    letter-spacing: 2px;
+    background: none;
+    border: 1px solid;
+    border-radius: 5px;
+    opacity: .5;
+}
+
+input.ready {
+    opacity: 1;
+    box-shadow: inset 0px 0px 20px rgba(0, 0, 0, 0.7);
+    background: white;
+    border: 2px solid;
+    border-radius: 10px;
+}
+
+// JS Results:
+.resultsContainer {
+	background-image: url(../assets/paper.png);
+    width: calc(100% - 150px);
+    padding: 27px 41px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.36);
+    margin: 30px 0px;
+    font-size: 20px;
+    transform: rotate(-5deg);
+    margin: 40px auto;
+    display: none;
+    letter-spacing: 1.5px;
+    line-height: 35px;
+
+    h2 {
+        margin-top: 0;
+    }
+}
+
+.nameCap { // caps first letter in resultsContainer
+    text-transform: capitalize;
+}
+
+button.reset {
+    background: rgba(108, 230, 221, 0.5);
+    box-shadow: inset 0px 0px 20px rgba(0, 0, 0, 0.7);
+    border: 2px solid;
+    padding:10px;
+    font-size: 25px;
+    letter-spacing: 1px;
+    border-radius: 10px;
+}
+
+// footer
+
+footer {
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    margin: 0;
+    padding-top: 40px;
+    
+    a {
+        color: black;
+        text-decoration: none;
+        letter-spacing: 1px;
+    }
+} 
+
+footer .wrapper {
+    background: rgba(108, 230, 221, 0.5);
+}
+
+.footerInfo {
+    padding: 30px;
+}
+
+.shareBtns {
+    text-align: center;
+}
+
+.twitterShare, .facebookShare{
+    height: 20px;
+    padding: 8px 12px;
+    color: white;
+    text-decoration: none;
+    letter-spacing: 2px;
+    border-radius: 5px;
+}
+
+.twitterShare {
+    background-color: #1b95e0;
+}
+
+.facebookShare {
+    background-color: #3b5998;
+} 

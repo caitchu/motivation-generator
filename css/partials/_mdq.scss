@@ -1,0 +1,59 @@
+/* Portrait tablet and small desktops */
+@media (max-width: 680px) {
+	.name label{
+		display: block;
+	}
+
+	input.names{
+		text-align: center;
+		padding: 5px;
+	}
+}
+
+@media (max-width: 560px) {
+	.btnWrapper{
+		flex-wrap:wrap;
+	}
+
+	fieldset.typeOfMotivation label, fieldset.typeOfTone label{		
+   		 width: calc(50% - 10px)!important;
+
+	}
+
+	.nameFlex{
+		align-items: center!important;
+		flex-direction: column!important;
+
+	}
+	input.names{
+		width: 100%!important;
+	}
+
+	.toWrapper{
+		margin-top: 10px;
+	}
+}
+
+@media (max-width: 500px) {
+
+	.resultsContainer{
+	  transform: none!important;
+	      width: 90%!important;
+
+
+	}
+
+}
+
+@media (max-width: 375px) {
+
+	fieldset.typeOfMotivation label, fieldset.typeOfTone label{		
+   		 width: calc(100% - 10px)!important;
+
+	}
+
+	.resultsContainer{
+		font-size: 16px!important;
+	}
+
+}

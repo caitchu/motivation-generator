@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Scope</title>
+</head>
+<body>
+	<script>
+		var app = {};
+
+		app.twitterHandle = "rchristiani";
+		app.numberOfTweets = 10;
+
+		app.getTweets = function(){
+			// Make an API call 
+			// get the data 
+			app.displayTweets(data);
+		}
+
+		app.displayTweets = function(data) {
+			// display the data 
+		}
+
+		app.init = function() { 
+			app.getTweets();
+		}
+
+		$(function(){
+			app.init(); // calls getTweets bc you defined init above
+			
+		})
+
+	</script>
+</body>
+</html>
