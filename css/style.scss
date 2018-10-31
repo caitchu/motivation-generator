@@ -1,6 +1,5 @@
 @import 'partials/setup';
 @import 'partials/typography';
-@import 'partials/variables';
 @import 'partials/mdq';
 
 
@@ -32,7 +31,7 @@ fieldset {
     border-radius: 5px;
     margin: 20px;
     box-shadow: inset 2px 2px 15px rgba(0, 0, 0, 0.3);
-    background-image: url(../assets/paper-texture.png);
+    // background-image: url(../assets/paper-texture.png);
 }
 
 .btnWrapper { // wraps the btns 
@@ -93,7 +92,7 @@ fieldset.typeOfMotivation label, fieldset.typeOfTone label {
 fieldset.typeOfMotivation label:hover, fieldset.typeOfTone label:hover {
     background: rgba(108, 230, 221, 0.5);
     border: 2px solid;
-    border-radius: 10px;
+    border-radius: 5px;
     opacity: 1;
 }
 
@@ -113,8 +112,8 @@ fieldset.name label {
 }
 
 .fromWrapper, .toWrapper {
-width: 50%;
-text-align: center;
+    width: 50%;
+    text-align: center;
 }
 
 input.names {
@@ -123,12 +122,10 @@ input.names {
     font-size: 25px;
     letter-spacing: 1px;
     background-image: url(../assets/line2.png);
-    // background-size: contain;
     background-repeat: no-repeat;
-    background-position: -7px 85%;
+    background-position: -7px 100%;
     background-color: transparent;
     color: #686868;
-    // border-bottom: 1px solid;
 }
 
 input.names:focus {

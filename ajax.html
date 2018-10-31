@@ -11,7 +11,7 @@
 			url: "http://myttc.ca/finch_station.json",
 			method: "GET",
 			dataType: "jsonp"
-			// the data is sent to a function and then the functiom will pull it out
+			// the data is sent to a function and then the function will pull it out
 			// can only be used if it's actually allowed by the server
 			// we passed this an object as a configuration 
 		});
@@ -20,12 +20,6 @@
 			console.log(ttcInfo);
 			console.log(ttcInfo.stops[1].routes[0].stop_times);
 		});
-		// .then(function(ttcInfo){
-		// 	console.log("It worked!", ttcInfo);
-		// });
-		// object configures our ajax request
-
-
 	</script>
 </body>
 </html>
